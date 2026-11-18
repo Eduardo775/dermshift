@@ -2,7 +2,7 @@
 message: "If you use this code, please cite the paper."
 title: "DermShift: annotation conventions and cross-dataset shift in dermoscopic lesion segmentation"
 authors:
-  - family-names: "SÃ¡nchez-JimÃ©nez"
+  - family-names: "Sanchez-Jimenez"
     given-names: "Eduardo"
 license: MIT
 repository-code: "https://github.com/Eduardo775/dermshift"
@@ -10,7 +10,7 @@ preferred-citation:
   type: article
   title: "Where the boundary is drawn: annotation conventions drive cross-dataset shift in dermoscopic lesion segmentation"
   authors:
-    - family-names: "SÃ¡nchez-JimÃ©nez"
+    - family-names: "Sanchez-Jimenez"
       given-names: "Eduardo"
   journal: "Machine Learning for Biomedical Imaging"
   year: 2026
