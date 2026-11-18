@@ -10,4 +10,4 @@ reproduced with exactly the same images in every partition.
 | `ham10000_matched.csv` | size-matched HAM10000 training subset (2,182 images) |
 | `eval_excluded.csv` | evaluation images excluded as duplicates of training images (empty in this study) |
 | `bcn20000_excluded.csv` | BCN20000 images excluded as duplicates of labelled images |
-| `isic2018_train_test_review.csv` | ISIC 2018 train-test candidate pairs with the visual decision (`same` / `different`) used in analysis S5 |
+| `isic2018_train_test_review.csv` | ISIC 2018 train-test pairs confirmed on visual review as the same photograph (61 pairs) used in analysis S5 |
