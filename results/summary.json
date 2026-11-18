@@ -1,0 +1,23 @@
+{
+  "excluded_eval_images": 0,
+  "excluded_bcn_images": 0,
+  "G1": 126,
+  "dominance": {
+    "acquisition": 0.04,
+    "population": 0.73,
+    "architecture": 0.006,
+    "dataset": 0.224
+  },
+  "gap_dominance_dice": {
+    "acquisition": 0.037,
+    "population": 0.815,
+    "architecture": 0.007,
+    "dataset": 0.141
+  },
+  "gap_dominance_nsd_1pct": {
+    "acquisition": 0.537,
+    "population": 0.341,
+    "architecture": 0.101,
+    "dataset": 0.02
+  }
+}

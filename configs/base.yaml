@@ -1,0 +1,88 @@
+# Base configuration shared by all models. Model files in configs/models/ override `model.name` only.
+# Machine-specific settings (paths, num_workers) go in configs/local.yaml (see local.example.yaml).
+
+paths:
+  datasets_root: null            # raw datasets (read-only)
+  project_root:  null            # everything the project writes: manifests, caches, runs, results
+  local_root:    null            # optional fast-disk copy of the caches; null = read in place
+
+data:
+  height: 192
+  width: 256
+  mask_threshold: 127            # mask pixel > 127 -> lesion
+  split_seed: 2026               # fixed partitions, independent of the training seed
+  n_folds: 10                    # HAM10000: stratified group k-fold (groups = lesion_id, strata = dx)
+  val_fold: 0
+  num_workers: 4
+  train_domain: ham              # ham | ham_matched | isic2018
+  normalization: imagenet
+
+augmentation:
+  hflip_p: 0.5
+  vflip_p: 0.5
+  affine_p: 1.0
+  affine_scale: [0.5, 1.5]
+  affine_translate: 0.1
+  affine_rotate: 0
+  affine_border: constant        # zero padding (reflection would duplicate lesions at the borders)
+  clahe_p: 0.9
+  clahe_clip: 4.0
+  clahe_grid: 8
+  gamma_p: 0.9
+  gamma_limit: [80, 120]
+  sharpen_p: 0.9
+  sharpen_alpha: [0.2, 0.5]
+  sharpen_lightness: [0.5, 1.0]
+  blur_p: 0.9
+  blur_limit: 3
+  hsv_p: 0.9
+  hsv_hue: 20
+  hsv_sat: 30
+  hsv_val: 20
+
+model:
+  name: unet
+  pretrained: true               # ImageNet weights for every pretrained encoder
+  coarse_threshold: 0.5          # cascade: threshold of the coarse mask fed to the refinement network
+  gate_reduction: 16             # cascade: bottleneck reduction of the channel gate
+
+loss:
+  name: hybrid                   # soft Dice + top-K margin ranking
+  lambda_dice: 0.8
+  lambda_rank: 0.3
+  alpha: 0.4                     # cascade: alpha * L(coarse) + (1 - alpha) * L(final)
+  topk_fraction: 0.1
+  margin: 0.3
+  max_pairs_per_side: 2048
+  eps: 1.0e-6
+
+optim:
+  optimizer: adam
+  lr_encoder: 1.0e-5             # pretrained encoders
+  lr_decoder: 1.0e-4             # everything else
+  lr_gate: 1.0e-3                # cascade channel gate
+  weight_decay: 1.0e-5
+  batch_size: 32
+  max_epochs: 200
+  scheduler: cosine
+  t_max: 200
+  eta_min: 0.0
+  patience: 40                   # early stopping on validation Dice
+  grad_clip: 1.0
+  amp: true                      # losses are computed in fp32
+
+eval:
+  threshold: 0.5
+  resolution: original           # probabilities upsampled (bilinear) to the reference mask size
+  hd_percentile: 95
+  sets: [ham10000_val, isic2018_test, ph2]
+  nsd_tolerances: [2, 5, 10]       # pixels at original resolution
+  nsd_tolerances_pct: [0.5, 1, 2]  # percent of the image diagonal (primary)
+  metrics_version: 2             # evaluations with a lower version are recomputed
+
+run:
+  seed: 42
+  deterministic: false           # seeded; cuDNN autotuning enabled (variability covered by seeds)
+  channels_last: false
+  log_every: 50
+  checkpoint_minutes: 10         # resumable last.pt at most every 10 minutes

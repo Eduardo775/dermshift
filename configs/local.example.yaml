@@ -1,0 +1,7 @@
+# Copy to configs/local.yaml and edit. Merged on top of base.yaml for every run.
+paths:
+  datasets_root: D:/Datasets       # contains HAM10000, ISIC2018, PH2Dataset and BCN20000
+  project_root:  D:/DermShift      # manifests, caches, runs and results (about 60 GB)
+  local_root:    null
+data:
+  num_workers: 4                   # 0 disables loader workers (useful for debugging)

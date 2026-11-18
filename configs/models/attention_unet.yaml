@@ -1,0 +1,3 @@
+base: ../base.yaml
+experiment: attention_unet
+model: {name: attention_unet}

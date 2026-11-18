@@ -1,0 +1,61 @@
+stratum,mean,median,count,variable,train_domain,indicator
+ALL,0.8456186318602898,0.8839174096580165,17790,all,ham,arch_disagreement
+,0.8182453360284718,0.8564619898724829,954,anatom_site,ham,arch_disagreement
+Head and neck,0.7808557912318608,0.8417329500176394,4608,anatom_site,ham,arch_disagreement
+Lower extremity,0.8659943104771929,0.9028756835910722,3305,anatom_site,ham,arch_disagreement
+Trunk,0.878861561980059,0.909979738381574,7124,anatom_site,ham,arch_disagreement
+Upper extremity,0.856945503365157,0.8839174096580165,1799,anatom_site,ham,arch_disagreement
+Benign,0.8760025443631139,0.9173384133503226,7831,diagnosis_1,ham,arch_disagreement
+Indeterminate,0.7699825609208388,0.8417329500176394,1088,diagnosis_1,ham,arch_disagreement
+Malignant,0.8280733299070161,0.8604072593473675,8871,diagnosis_1,ham,arch_disagreement
+Basal cell carcinoma,0.7914495198881999,0.8429563794249725,3676,dx,ham,arch_disagreement
+Benign soft tissue proliferations - Vascular,0.814732746836473,0.8839174096580165,151,dx,ham,arch_disagreement
+Dermatofibroma,0.8418982615103202,0.8604072593473675,168,dx,ham,arch_disagreement
+Melanoma metastasis,0.761827802219547,0.8417329500176394,633,dx,ham,arch_disagreement
+"Melanoma, NOS",0.8761692850386188,0.909979738381574,4003,dx,ham,arch_disagreement
+Nevus,0.8949370522329214,0.9262370021605024,5647,dx,ham,arch_disagreement
+Scar,0.7479984182851221,0.7807197918912161,314,dx,ham,arch_disagreement
+Seborrheic keratosis,0.8483584347154333,0.8839174096580165,1268,dx,ham,arch_disagreement
+Solar lentigo,0.8170065006413392,0.8515512130078553,283,dx,ham,arch_disagreement
+Solar or actinic keratosis,0.7699825609208388,0.8417329500176394,1088,dx,ham,arch_disagreement
+"Squamous cell carcinoma, NOS",0.7995123929902558,0.8429563794249725,559,dx,ham,arch_disagreement
+ALL,0.8324193533497911,0.8839174096580165,17790,all,ham_matched,arch_disagreement
+,0.8117608380286769,0.8429563794249725,954,anatom_site,ham_matched,arch_disagreement
+Head and neck,0.7696776505907832,0.8417329500176394,4608,anatom_site,ham_matched,arch_disagreement
+Lower extremity,0.8505366449671489,0.8839174096580165,3305,anatom_site,ham_matched,arch_disagreement
+Trunk,0.8647861982650185,0.9028756835910722,7124,anatom_site,ham_matched,arch_disagreement
+Upper extremity,0.8426266562727504,0.8839174096580165,1799,anatom_site,ham_matched,arch_disagreement
+Benign,0.8638459994826484,0.909979738381574,7831,diagnosis_1,ham_matched,arch_disagreement
+Indeterminate,0.7507602187674086,0.7807197918912161,1088,diagnosis_1,ham_matched,arch_disagreement
+Malignant,0.8146922732640315,0.8429563794249725,8871,diagnosis_1,ham_matched,arch_disagreement
+Basal cell carcinoma,0.7786814059130467,0.8417329500176394,3676,dx,ham_matched,arch_disagreement
+Benign soft tissue proliferations - Vascular,0.811001733704083,0.8515512130078553,151,dx,ham_matched,arch_disagreement
+Dermatofibroma,0.835877849646181,0.8564619898724829,168,dx,ham_matched,arch_disagreement
+Melanoma metastasis,0.7560577307677915,0.7807197918912161,633,dx,ham_matched,arch_disagreement
+"Melanoma, NOS",0.8613896251570553,0.8839174096580165,4003,dx,ham_matched,arch_disagreement
+Nevus,0.8829212799763216,0.9173384133503226,5647,dx,ham_matched,arch_disagreement
+Scar,0.7262202496425788,0.7807197918912161,314,dx,ham_matched,arch_disagreement
+Seborrheic keratosis,0.8367294024070586,0.8839174096580165,1268,dx,ham_matched,arch_disagreement
+Solar lentigo,0.8022147447086069,0.8429563794249725,283,dx,ham_matched,arch_disagreement
+Solar or actinic keratosis,0.7507602187674086,0.7807197918912161,1088,dx,ham_matched,arch_disagreement
+"Squamous cell carcinoma, NOS",0.7834974864206787,0.8417329500176394,559,dx,ham_matched,arch_disagreement
+ALL,0.8040875699202781,0.8515512130078553,17790,all,isic2018,arch_disagreement
+,0.7810236094057155,0.8417329500176394,954,anatom_site,isic2018,arch_disagreement
+Head and neck,0.7196989830487465,0.7807197918912161,4608,anatom_site,isic2018,arch_disagreement
+Lower extremity,0.8320071670531729,0.8839174096580165,3305,anatom_site,isic2018,arch_disagreement
+Trunk,0.8457036287428535,0.8839174096580165,7124,anatom_site,isic2018,arch_disagreement
+Upper extremity,0.8163824865732324,0.8515512130078553,1799,anatom_site,isic2018,arch_disagreement
+Benign,0.8446954011647361,0.8969466104028946,7831,diagnosis_1,isic2018,arch_disagreement
+Indeterminate,0.6781786568300759,0.7008418809977471,1088,diagnosis_1,isic2018,arch_disagreement
+Malignant,0.7836827644830995,0.8417329500176394,8871,diagnosis_1,isic2018,arch_disagreement
+Basal cell carcinoma,0.7319257801820009,0.7807197918912161,3676,dx,isic2018,arch_disagreement
+Benign soft tissue proliferations - Vascular,0.777193630186945,0.8429563794249725,151,dx,isic2018,arch_disagreement
+Dermatofibroma,0.8096477708298954,0.8515512130078553,168,dx,isic2018,arch_disagreement
+Melanoma metastasis,0.722161624872808,0.7807197918912161,633,dx,isic2018,arch_disagreement
+"Melanoma, NOS",0.8474335543101499,0.8839174096580165,4003,dx,isic2018,arch_disagreement
+Nevus,0.8699507510086388,0.909979738381574,5647,dx,isic2018,arch_disagreement
+Scar,0.677182051010245,0.6774186914409385,314,dx,isic2018,arch_disagreement
+Seborrheic keratosis,0.8112281858570423,0.8515512130078553,1268,dx,isic2018,arch_disagreement
+Solar lentigo,0.7333859654899901,0.7807197918912161,283,dx,isic2018,arch_disagreement
+Solar or actinic keratosis,0.6781786568300759,0.7008418809977471,1088,dx,isic2018,arch_disagreement
+"Squamous cell carcinoma, NOS",0.7371839165161419,0.7807197918912161,559,dx,isic2018,arch_disagreement
