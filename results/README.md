@@ -1,7 +1,10 @@
 # Results
 
-Output of `python scripts/run.py analyze` and `duplicate-masks` for the three seeds, i.e. every number
-reported in the paper. File prefixes follow Table 2 of the paper.
+Output of `python scripts/run.py analyze` and `duplicate-masks` for the three seeds of the runs reported in the
+paper. Training is not bit-wise deterministic (cuDNN autotuning), so retraining with this code reproduces these
+values up to seed-level variation. Per-image tables (`per_image_seed_avg.csv`) and the detailed S4 tables of the
+original runs are not included; S4 summary values are reported in the paper. File prefixes follow Table 2 of the
+paper.
 
 | Files | Analysis |
 |---|---|
