@@ -8,9 +8,9 @@ license: MIT
 repository-code: "https://github.com/Eduardo775/dermshift"
 preferred-citation:
   type: article
-  title: "Where the boundary is drawn: annotation conventions drive cross-dataset shift in dermoscopic lesion segmentation"
+  title: ""
   authors:
     - family-names: "Sanchez-Jimenez"
       given-names: "Eduardo"
-  journal: "Machine Learning for Biomedical Imaging"
+  journal: ""
   year: 2026
