@@ -8,9 +8,7 @@ license: MIT
 repository-code: "https://github.com/Eduardo775/dermshift"
 preferred-citation:
   type: article
-  title: ""
   authors:
     - family-names: "Sanchez-Jimenez"
       given-names: "Eduardo"
-  journal: ""
   year: 2026
